@@ -1,10 +1,11 @@
 variable "resource_group_name" {
   description = "Default resource group name that the database will be created in."
-  default     = "myapp-rg"
+  default     = "Terraform-rg"
 }
 
 variable "location" {
   description = "The location/region where the database and server are created. Changing this forces a new resource to be created."
+   default     = "us-east"
 }
 
 variable "server_version" {
@@ -14,6 +15,7 @@ variable "server_version" {
 
 variable "db_name" {
   description = "The name of the database to be created."
+  default     = "Terraform db"
 }
 
 variable "db_edition" {
@@ -33,10 +35,12 @@ variable "collation" {
 
 variable "sql_admin_username" {
   description = "The administrator username of the SQL Server."
+  default     = "admin"
 }
 
 variable "sql_password" {
   description = "The administrator password of the SQL Server."
+  default     = "Passw0rd123"
 }
 
 variable "start_ip_address" {
@@ -54,7 +58,7 @@ variable "tags" {
   type        = "map"
 
   default = {
-    tag1 = ""
-    tag2 = ""
+    tag1 = "Network"
+    tag2 = "Subnet"
   }
 }
